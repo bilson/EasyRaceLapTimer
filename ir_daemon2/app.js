@@ -15,6 +15,7 @@ var util = require('util');
 var vtx_sensor = require('./modules/vtx_sensor.js');
 var race_box = require('./modules/race_box.js');
 var ir_sensor = require('./modules/ir_sensor.js');
+var vtx_i2c = require('./modules/vtx_i2c.js');
 var fs = require('fs');
 
 wpi.setup('wpi');
@@ -81,6 +82,7 @@ function process_cmd(cmd){
 	console.log("Received command '%s' ", cmd);
   	switch(cmd) {
   		case "RESET#":
+        vtx_i2c.startRace();
   			vtx_sensor.resetLapTimes();
         race_box.reset_timing();
   			break;
