@@ -9,6 +9,8 @@
   "author": "Alexander Bierbrauer",
   "license": "GPL-3.0",
   "dependencies": {
+    "async": "^2.5.0",
+    "i2c-bus": "^1.2.2",
     "moment": "^2.14.1",
     "request": "^2.74.0",
     "serialport": "^4.0.1",
